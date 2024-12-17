@@ -26,7 +26,7 @@ VALIDATE(){
 CHECK_ROOT
 
 #sh 15-loops.sh git mysql postfix nginx
-for package $@ #$@ refers to all arguments
+for package in $@ # $@ refers to all arguments
 do 
     dnf list installed package
     if [$? -ne 0]
